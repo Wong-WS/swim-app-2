@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeData } from './utils/initData';
+
+// Initialize sample data for the application
+initializeData();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
