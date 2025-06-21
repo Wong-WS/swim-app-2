@@ -144,7 +144,7 @@ const BookingForm = ({ selectedPlace, selectedDate, selectedSlot, onCancel, onSu
         />
         
         <ButtonContainer>
-          <Button primary type="submit">
+          <Button $primary type="submit">
             Confirm Booking
           </Button>
           <Button type="button" onClick={onCancel}>

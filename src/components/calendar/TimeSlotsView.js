@@ -48,7 +48,7 @@ const TimeSlotsView = ({ slots, selectedDate, onSlotSelect, selectedSlot }) => {
           {slots.map((slot, index) => (
             <TimeSlotButton
               key={index}
-              primary={selectedSlot && selectedSlot.startFormatted === slot.startFormatted}
+              $primary={selectedSlot && selectedSlot.startFormatted === slot.startFormatted}
               onClick={() => onSlotSelect(slot)}
             >
               {slot.startFormatted} - {slot.endFormatted}

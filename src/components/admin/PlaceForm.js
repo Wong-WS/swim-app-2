@@ -124,7 +124,7 @@ const PlaceForm = ({ editingPlace, onCancel }) => {
         />
         
         <ButtonContainer>
-          <Button primary type="submit">
+          <Button $primary type="submit">
             {editingPlace ? 'Update Place' : 'Add Place'}
           </Button>
           

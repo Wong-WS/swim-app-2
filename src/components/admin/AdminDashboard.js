@@ -36,10 +36,10 @@ const TabButton = styled.button`
   border: none;
   background: none;
   font-size: 16px;
-  font-weight: ${props => props.active ? '700' : '400'};
-  color: ${props => props.active ? '#0077cc' : '#333'};
+  font-weight: ${props => props.$active ? '700' : '400'};
+  color: ${props => props.$active ? '#0077cc' : '#333'};
   cursor: pointer;
-  border-bottom: 2px solid ${props => props.active ? '#0077cc' : 'transparent'};
+  border-bottom: 2px solid ${props => props.$active ? '#0077cc' : 'transparent'};
   
   &:hover {
     color: #0077cc;
@@ -83,19 +83,19 @@ const AdminDashboard = () => {
       
       <Navigation>
         <TabButton
-          active={activeTab === 'places'}
+          $active={activeTab === 'places'}
           onClick={() => setActiveTab('places')}
         >
           Places
         </TabButton>
         <TabButton
-          active={activeTab === 'availability'}
+          $active={activeTab === 'availability'}
           onClick={() => setActiveTab('availability')}
         >
           Availability Rules
         </TabButton>
         <TabButton
-          active={activeTab === 'bookings'}
+          $active={activeTab === 'bookings'}
           onClick={() => setActiveTab('bookings')}
         >
           Bookings

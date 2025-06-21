@@ -55,13 +55,13 @@ const Day = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.isSelected ? '#e6f7ff' : props.isAvailable ? 'white' : '#f0f0f0'};
-  color: ${props => props.isToday ? '#0077cc' : props.isOtherMonth ? '#aaa' : '#333'};
-  font-weight: ${props => props.isToday ? 'bold' : 'normal'};
+  background-color: ${props => props.$isSelected ? '#e6f7ff' : props.$isAvailable ? 'white' : '#f0f0f0'};
+  color: ${props => props.$isToday ? '#0077cc' : props.$isOtherMonth ? '#aaa' : '#333'};
+  font-weight: ${props => props.$isToday ? 'bold' : 'normal'};
   
   &:hover {
     border-color: #0077cc;
-    background-color: ${props => props.isSelected ? '#e6f7ff' : '#f0f8ff'};
+    background-color: ${props => props.$isSelected ? '#e6f7ff' : '#f0f8ff'};
   }
 `;
 
@@ -126,9 +126,9 @@ const CalendarView = ({ availableDates, onDateSelect, selectedDate }) => {
           return (
             <Day 
               key={dateString}
-              isAvailable={isAvailable}
-              isToday={isToday}
-              isSelected={isSelected}
+              $isAvailable={isAvailable}
+              $isToday={isToday}
+              $isSelected={isSelected}
               onClick={() => isAvailable && onDateSelect(dateString)}
             >
               {day.getDate()}

@@ -28,7 +28,7 @@ const PlaceSelector = ({ selectedPlace, onPlaceChange }) => {
   // Create options for the select component
   const placeOptions = Object.keys(placesByArea).flatMap(area => {
     const areaLabel = `--- ${area} ---`;
-    const areaOption = { value: '', label: areaLabel, disabled: true };
+    const areaOption = { value: `area-header-${area}`, label: areaLabel, disabled: true };
     
     const placeOptions = placesByArea[area].map(place => ({
       value: place.id,

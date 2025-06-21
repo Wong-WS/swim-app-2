@@ -248,7 +248,7 @@ const AvailabilityRuleForm = ({ editingRule, onCancel }) => {
         </AddRuleButton>
         
         <ButtonContainer>
-          <Button primary type="submit">
+          <Button $primary type="submit">
             {editingRule ? 'Update Rule' : 'Add Rule'}
           </Button>
           
